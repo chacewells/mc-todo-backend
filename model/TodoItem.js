@@ -1,4 +1,4 @@
-class TodoList{
+class TodoItem{
     constructor(id,description,done){
         this.id = id,
         this.description = description,
@@ -6,4 +6,4 @@ class TodoList{
     }
 }
 
-module.exports = TodoList;
+module.exports = TodoItem;
