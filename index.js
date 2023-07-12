@@ -23,7 +23,7 @@ app.post("/todo", function (req, res) {
     const description = req.body.description;
     console.log("got description", {description});
     const newTodoItem = todoListRepo.add(description);
-    res.json(newTodoItem).location(`http://localhost:3000/todo/${newTodoItem.id}`).send(201).end();
+    res.json(newTodoItem).location(`/todo/${newTodoItem.id}`).send(201).end();
 });
 
 app.get("/todo/:id", function (req, res) {
@@ -41,6 +41,6 @@ app.put("/todo/:id", function (req, res) {
 })
 
 
-app.listen("3000", function (req, res) {
-    console.log("Server running on port 3000!");
+app.listen("3001", function (req, res) {
+    console.log("Server running on port 3001!");
 });
